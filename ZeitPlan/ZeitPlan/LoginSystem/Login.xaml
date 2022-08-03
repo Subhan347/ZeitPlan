@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZeitPlan.LoginSystem.Login"
+             Title="LOGIN"
+       >
+    <ContentPage.Content>
+        <StackLayout Padding="0">
+            <Grid>
+               
+                <StackLayout Padding="0" Margin="0">
+                   
+                    <Frame BackgroundColor="Aqua" HeightRequest="210" HorizontalOptions="FillAndExpand" Padding="0">
+                        <Image Source="pexelsravi.jpg" Aspect="AspectFill" Margin="0" />
+                    </Frame>  
+                </StackLayout>
+                <StackLayout Margin="15,110,15,0">
+                   
+                    <Frame BackgroundColor="white" HasShadow="True" HeightRequest="400" HorizontalOptions="FillAndExpand">
+                   
+
+                        <StackLayout>
+                          
+                                <StackLayout HorizontalOptions="CenterAndExpand">
+                                    <Label Text="SIGN IN" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center">
+                                    
+                                        
+                                  
+                                </Label>
+                                
+
+                            </StackLayout>
+                                <StackLayout Margin="0,25,0,0">
+                                
+                               
+                                <Frame BackgroundColor="Transparent" Padding="0" Margin="0" BorderColor="#800080" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="AliceBlue" CornerRadius="30" HeightRequest="35" WidthRequest="35" Padding="0" Margin="7" HorizontalOptions="Start">
+                                                <Image Source="icon_about.png" Aspect="AspectFill" Margin="0" />
+                                            </Frame>
+                                        <Entry ClearButtonVisibility="WhileEditing" Placeholder="Email" TextColor="#800080" PlaceholderColor="Gray" Keyboard="Email" x:Name="txtEmail" HorizontalOptions="FillAndExpand" Margin="0,0,15,0">
+
+                                            </Entry>
+                                        
+                                    </StackLayout>
+                                    </Frame>
+                                    <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0" BorderColor="#800080" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="AliceBlue" CornerRadius="30" HeightRequest="35" WidthRequest="35" Padding="0" Margin="7" HorizontalOptions="Start">
+                                                <Image Source="icon_about.png" Aspect="AspectFill" Margin="0" />
+                                            </Frame>
+                                            <Entry ClearButtonVisibility="WhileEditing" Placeholder="Password" TextColor="#800080" PlaceholderColor="Gray" IsPassword="True" x:Name="txtPassword" HorizontalOptions="FillAndExpand" Margin="0,0,15,0">
+
+                                            </Entry>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="False" Color="#800080"></CheckBox>
+                                    <Label Text="Remember me" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"></Label>
+                                <Label Text="Forget Password" HorizontalTextAlignment="End" FontAttributes="Bold" FontSize="15" VerticalTextAlignment="End" Margin="6" HorizontalOptions="EndAndExpand" TextColor="#800080"></Label>
+                                </StackLayout>
+                            <ActivityIndicator x:Name="ProgressInd" IsRunning="False"></ActivityIndicator>
+                                <Button Text="SIGN IN" FontAttributes="Bold"
+                                    CornerRadius="30" BackgroundColor="#800080" TextColor="#FFFFFF" Clicked="Button_Clicked"></Button>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                    <Label Text="New on ZeitPlan ?" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                                    <Label Text="Sign Up" HorizontalTextAlignment="Center" TextColor="#800080" FontAttributes="Bold" VerticalTextAlignment="Center">
+                                        <Label.GestureRecognizers>
+
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </Frame>
+                   
+                   
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

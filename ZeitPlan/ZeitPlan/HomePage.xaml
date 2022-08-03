@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZeitPlan.HomePage"
+             Title="HOME PAGE"
+             BackgroundImageSource="goodpic.jpg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30">
+                <Image Margin="20" Source="ic_gen_purple.png"></Image>
+
+                <Button Text="Continue" CornerRadius="50" BackgroundColor="#800080" TextColor="#FFFFFF" Clicked="Button_Clicked"></Button>
+                <Label Text="Already on ZeitPlan" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Gray">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                <CarouselView x:Name="DataList" IndicatorView="IndicatorView">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame HasShadow="True" Margin="20" BorderColor="#800080" CornerRadius="5" HeightRequest="450" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                    <StackLayout>
+ 
+                                        <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="40" HorizontalTextAlignment="Center" TextColor="Gray"></Label>
+                                        <Image Source="icon_feed.png" HorizontalOptions="Center" HeightRequest="150" WidthRequest="150" Aspect="AspectFill"/>
+                                        <Label></Label>
+                                        <Label Text="{Binding Email}" FontSize="10" HorizontalTextAlignment="Center" TextColor="#800080"></Label>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+
+
+
+
+
+
+
+                </CarouselView>
+                <IndicatorView x:Name="IndicatorView" IndicatorColor="Gray" SelectedIndicatorColor="#800080" HorizontalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
